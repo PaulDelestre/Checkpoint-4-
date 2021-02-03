@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+
 use App\Entity\Categories;
 use App\Form\CategoriesType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
