@@ -24,7 +24,7 @@ class Annonces
     private $title;
 
     /**
-     * @Gedmo\slug(fiels={"title"})
+     * @Gedmo\Slug(fields={"title"})
      * @ORM\Column(type="string", length=255)
      */
     private $slug;
@@ -48,7 +48,7 @@ class Annonces
      * @ORM\ManyToOne(targetEntity=users::class, inversedBy="annonces")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $sers;
+    private $users;
 
     /**
      * @ORM\ManyToOne(targetEntity=categories::class, inversedBy="annonces")
