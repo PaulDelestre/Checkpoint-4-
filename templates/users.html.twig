@@ -12,12 +12,15 @@
 <body class="layout with-sidenav">
     <header>
         <nav class="navbar shadow-1 primary">
-            <a href="{{path('app_home') }}" class="navbar-brand">Axentix</a>
+            <a href="{{path('app_home') }}" class="navbar-brand">PouleHouse</a>
             <div class="navbar-menu ml-auto">
                 <a class="navbar-link" href="#">Acceuil</a>
-                <a class="navbar-link" href="#">Link 2</a>
-                <a class="navbar-link" href="#">Link 3</a>
-                <a class="navbar-link" href="#">Link 4</a>
+                <a class="navbar-link" href="{{path('app_logout') }}">Se déconecter</a>
+                <a class="navbar-link" href="{{path('admin_categories_ajout') }}">Ajout de catégorie</a>
+                <a class="navbar-link" href="{{path('admin_categories_home') }}">Modifié les catégories</a>
+                <a class="navbar-link" href="{{path('admin_annonces_home') }}">Gestion d'annonce</a>
+                <a class="navbar-link" href="{{path('users_annonces_ajout')}}">Ajouté une annonce</a>
+                <a class="navbar-link" href="{{path('users')}}">Profil</a>
             </div>
         </nav>
 
@@ -41,7 +44,7 @@
     </main>
 
     <footer class="footer primary">
-        Copyright © 2020 - Example
+        Père dodu 2021
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axentix@1.0.0/dist/js/axentix.min.js"></script>

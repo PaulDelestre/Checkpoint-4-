@@ -10,11 +10,14 @@
 
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/pauldelestre/Desktop/Poule/Poule/src/Controller/AdminController.php'|file_link(0) }}">src/Controller/AdminController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/pauldelestre/Desktop/Poule/Poule/templates/admin/index.html.twig'|file_link(0) }}">templates/admin/index.html.twig</a></code></li>
-    </ul>
+    {% block body %}
+    <div class="grix xs4 container">
+        {% for message in app.flashes('message') %}
+            <div class="col-xs4">
+                <div class="p-3 my-2 rounded-2 success">{{ message}}</div>
+            </div>
+        {% endfor %}
+    <div class="col-xs4 "> 
+        
 </div>
 {% endblock %}

@@ -3,9 +3,7 @@
 {% block title %}Acceuil!{% endblock %}
 
 {% block body %}
-<h1>Poule House</h1>
 <div class="container">
-    {% for annonce in annonces %}
     <div class="card shadow-1 fx-row">
         <div class="primary d-flex vcenter fx-center px-4">
             <img src="image_filter('square')" alt="{{ annonce.title }}">
@@ -20,6 +18,5 @@
             </div>
         </div>
     </div>
-    {% endfor %}
 </div>
-{% endblock %}
+{% endblock %} 
