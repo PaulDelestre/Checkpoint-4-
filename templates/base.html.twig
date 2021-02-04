@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
 
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.0.0/dist/css/axentix.min.css">
-    {% block stylesheets %}{% endblock %}
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-</head>
-
-<body>
-    <header>
-        <nav class="navbar shadow-1 primary">
-            <a href="{{path('app_home') }}" class="navbar-brand">Axentix</a>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@0.5.3/dist/css/axentix.min.css">
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    </head>
+    <body>
+        <header>
+        <nav class="navbar primary">
+            <a href="{{ path('app_home') }}" class="navbar-brand">PetitesAnnonces</a>
             <div class="navbar-menu ml-auto">
-                <a class="navbar-link" href="#">Acceuil</a>
-                <a class="navbar-link" href="#">Link 2</a>
-                <a class="navbar-link" href="#">Link 3</a>
-                <a class="navbar-link" href="#">Link 4</a>
+            <a class="navbar-link" href="#">Accueil</a>
+            <a class="navbar-link" href="{{path('app_register') }}">Inscription</a>
+            <a class="navbar-link" href="{{path('app_login') }}">Se connecter</a>
+            <a class="navbar-link" href="{{path('users')}}">Profil</a>
             </div>
         </nav>
-    </header>
+        </header>
 
-    <main>
-        {% block body %}{% endblock %}
-    </main>
+        <main>
+            {% block body %}{% endblock %}
+        </main>
 
-    <footer class="footer primary">
-        Copyright © 2020 - Example
-    </footer>
+        <footer class="footer primary">
+        Mc chicken
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/axentix@1.0.0/dist/js/axentix.min.js"></script>
-    {% block javascripts %}{% endblock %}
-    <script src="{{ asset('js/scripts.js') }}"></script>
-</body>
+       
 
+        <script src="https://cdn.jsdelivr.net/npm/axentix@0.5.3/dist/js/axentix.min.js"></script>
+        {% block javascripts %}{% endblock %}
+        <script src="{{ asset('js/scripts.js') }}"></script>
+    </body>
 </html>
